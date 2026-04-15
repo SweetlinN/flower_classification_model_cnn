@@ -4,7 +4,10 @@ from keras.models import load_model
 import streamlit as st 
 import tensorflow as tf
 import numpy as np
+from tensorflow.keras.models import load_model
 
+file_path = os.path.join('upload', uploaded_file.name)
+st.markdown(classify_images(file_path))
 st.header('Flower Classification CNN Model')
 flower_names = ['daisy', 'dandelion', 'rose', 'sunflower', 'tulip']
 
